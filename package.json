@@ -1,0 +1,30 @@
+{
+  "name": "omh-web-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "npm run release",
+    "release": "npm run build:dev && npm run build:prod",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "build:prod": "NODE_ENV=production rollup -c"
+  },
+  "peerDependencies": {
+    "react": ">= 16.x.x",
+    "styled-jsx": ">= 3.x.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.16.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-node-resolve": "^5.1.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "styled-jsx": "^3.2.1"
+  }
+}
